@@ -42,7 +42,7 @@ boost = GradientBoostingClassifier(loss='log_loss')
 parameters = {'learning_rate': [0.1, 0.2, 0.5, 1, 2, 4, 8],
               'n_estimators': [100, 150, 200, 250, 300],
               'subsample': [0.25, 0.5, 0.75, 1]}
-clf = GridSearchCV(boost, parameters, scoring='roc_auc', n_jobs=10, verbose=True)
+clf = GridSearchCV(boost, parameters, scoring='roc_auc', n_jobs=10, verbose=10)
 clf.fit(arr_new, y_train)
 res = roc_auc_score(y_test, clf.predict_proba(arr_test_new)[:, 1])
 print(res)

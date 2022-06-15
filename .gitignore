@@ -25,6 +25,10 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+kaggle/
+SMNI_CMI_TEST/
+SMNI_CMI_TRAIN/
+
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
